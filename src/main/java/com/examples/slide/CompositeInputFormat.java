@@ -5,5 +5,5 @@ public class CompositeInputFormat {
             KeyValueTextInputFormat.class,
             file1,
             file2
-    )
+    );
 }
