@@ -7,6 +7,6 @@ public class WritableTest {
     public interface Writable {
         void readFields(DataInput, in);
         void write (DataOutput, out);
-        
+
     }
 }
