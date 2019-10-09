@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e9413d0-5139-4315-8fad-b21366807332" name="Default" comment="" />
+    <list default="true" id="1e9413d0-5139-4315-8fad-b21366807332" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/slide/Partitioner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/examples/slide/Partitioner.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="add.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/slide/add.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="646">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#737#738#0" expanded="true" />
@@ -54,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Partitioner.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Partitioner.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/slide/Partitioner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="76">
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -88,12 +90,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/examples/slide/Slide.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/examples/slide/Partitioner.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/examples/slide/GroupingComparatorClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/examples/slide/CompositeInputFormat.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/examples/slide/Writable.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/examples/slide/WritableTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/examples/slide/add.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/examples/slide/Partitioner.java" />
       </list>
     </option>
   </component>
@@ -302,13 +304,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/slide/Partitioner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/slide/CompositeInputFormat.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -325,13 +320,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/slide/add.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="646">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#737#738#0" expanded="true" />
             <element signature="e#803#804#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/slide/Partitioner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
         </state>
       </provider>
     </entry>
