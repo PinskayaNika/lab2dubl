@@ -23,7 +23,12 @@ import java.io.IOException;
         }
 
         public void readFields(DataInput in) throws IOException {
-            
+            a = in.readInt();
+            b = in.readInt();
+        }
+
+        public String toString () {
+            return Integer.toString(a) + ", " + Integer.toString(b);
         }
     }
 //}
