@@ -1,4 +1,4 @@
-package com.examples.slide;
+package com.examples.reduceside;
 
 public class JoinReducer extends Reducer {
 

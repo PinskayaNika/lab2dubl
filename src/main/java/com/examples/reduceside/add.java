@@ -1,4 +1,4 @@
-package com.examples.slide;
+package com.examples.reduceside;
 
 import java.io.DataInput;
 import java.io.DataOutput;
