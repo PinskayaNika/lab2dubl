@@ -19,7 +19,7 @@ public class JoinReducer extends Reducer<TextPair, Text, Text, Text>  {
             Text outValue = new Text(call.toString() + "\t" + systemInfo.toString());
             context.write(key.getFirst(), outValue);
 
-            
+
         }
     }
 
