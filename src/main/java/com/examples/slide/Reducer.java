@@ -1,5 +1,6 @@
 package com.examples.slide;
 
-public class Reduce {
+public class JoinReducer extends Reducer {
+
 
 }
