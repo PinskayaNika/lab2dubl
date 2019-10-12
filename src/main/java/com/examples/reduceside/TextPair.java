@@ -12,7 +12,10 @@ public class TextPair implements WritableComparable<TextPair> {
         this.second = new Text();
     }
 
-    
+    public TextPair() {
+        this.first = new Text();
+        this.second = new Text();
+    }
 
 
 }
