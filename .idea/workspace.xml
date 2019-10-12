@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e9413d0-5139-4315-8fad-b21366807332" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/TextPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/TextPair.java" afterDir="false" />
-    </list>
+    <list default="true" id="1e9413d0-5139-4315-8fad-b21366807332" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,8 +46,8 @@
       <file leaf-file-name="TextPair.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/TextPair.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+            <state relative-caret-position="399">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,8 +125,8 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="948" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="915" />
     <option name="y" value="25" />
     <option name="width" value="1005" />
     <option name="height" value="1038" />
@@ -258,7 +256,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="948" y="25" width="1005" height="1038" extended-state="0" />
+    <frame x="915" y="25" width="1005" height="1038" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -423,8 +421,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/TextPair.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        <state relative-caret-position="399">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
