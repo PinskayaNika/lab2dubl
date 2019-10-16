@@ -26,9 +26,17 @@ public class TextPair implements WritableComparable<TextPair> {
         return first;
     }
 
-    public Text setFirst(Text first) {
+    public void setFirst(Text first) {
         this.first = first;
     }
-    
 
+    public Text getSecond() {
+        return second;
+    }
+
+    public void setSecond(Text second) {
+        this.second = second;
+    }
+
+    
 }
