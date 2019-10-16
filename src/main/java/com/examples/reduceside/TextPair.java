@@ -4,6 +4,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.WritableComparable;
 
 import java.io.DataInput;
+import java.io.DataOutput;
 import java.io.IOException;
 
 public class TextPair implements WritableComparable<TextPair> {
@@ -65,19 +66,19 @@ public class TextPair implements WritableComparable<TextPair> {
         return  first + "\t" + second;
     }
 
-    @Override
+    //@Override
     public void readFields(DataInput in) throws IOException {
         first.readFields(in);
         second.readFields(in);
     }
 
-    @Override
-    public void write(DataInput out) throws  IOException {
+    //@Override
+    public void write(DataOutput out) throws  IOException {
         first.write(out);
         second.write(out);
     }
 
-    @Override
+   // @Override
     public int compareTo(TextPair tp) {
         int cmp = first.compareTo(tp.getFirst());
         if (cmp != 0) {
