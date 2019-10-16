@@ -3,6 +3,9 @@ package com.examples.reduceside;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.WritableComparable;
 
+import java.io.DataInput;
+import java.io.IOException;
+
 public class TextPair implements WritableComparable<TextPair> {
     public Text first;
     public Text second;
@@ -38,5 +41,35 @@ public class TextPair implements WritableComparable<TextPair> {
         this.second = second;
     }
 
-    
+    public void set(Text first, Text second) {
+        this.first = first;
+        this.second = second;
+    }
+
+    @Override
+    public int hashCode() {
+        return first.hashCode() * 163 + second.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof TextPair) {
+            TextPair tp = (TextPair) obj;
+            return first.equals(tp.getFirst()) && second.equals(tp.getSecond());
+        }
+        return false;
+    }
+
+    @Override
+    public String toString() {
+        return  first + "\t" + second;
+    }
+
+    @Override
+    public void readFields(DataInput in) throws IOException {
+        first.readFields(in);
+        second.readFields(in);
+    }
+
+    @
 }
