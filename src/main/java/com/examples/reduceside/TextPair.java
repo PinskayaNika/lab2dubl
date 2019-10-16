@@ -17,5 +17,6 @@ public class TextPair implements WritableComparable<TextPair> {
         this.second = second;
     }
 
+    
 
 }
