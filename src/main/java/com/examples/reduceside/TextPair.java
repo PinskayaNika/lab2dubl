@@ -71,5 +71,22 @@ public class TextPair implements WritableComparable<TextPair> {
         second.readFields(in);
     }
 
-    @
+    @Override
+    public void write(DataInput out) throws  IOException {
+        first.write(out);
+        second.write(out);
+    }
+
+    @Override
+    public int compareTo(TextPair tp) {
+        int cmp = first.compareTo(tp.getFirst());
+        if (cmp != 0) {
+            return cmp;
+        }
+        return second.compareTo(tp.getSecond());
+    }
+
+    public TextPair reverse() {
+        return new TextPair(second,first);
+    }
 }
