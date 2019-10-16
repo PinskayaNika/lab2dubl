@@ -22,4 +22,13 @@ public class TextPair implements WritableComparable<TextPair> {
         this.second = new Text(second);
     }
 
+    public Text getFirst() {
+        return first;
+    }
+
+    public Text setFirst(Text first) {
+        this.first = first;
+    }
+    
+
 }
