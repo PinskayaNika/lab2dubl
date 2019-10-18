@@ -9,7 +9,7 @@ public class GroupingComparatorClass implements WritableComparator {
     public FlightComparator() {     //Проверка кода аэропорта
         super(TextPair.class, true);
     }
-    
+
     public int compare(WritableComparable a, WritableComparable b) {
         TextPair Key1 = (TextPair) a;
         TextPair Key2 = (TextPair) b;
