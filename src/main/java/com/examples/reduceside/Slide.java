@@ -29,7 +29,7 @@ public class Slide {
         job.setPartitionerClass(Partitioner.class);
         job.setGroupingComparatorClass(GroupingComparatorClass.class);
         job.setReducerClass(JoinReducer.class);
-        job.setMapOutputKeyClass(TextPair.class);
+        job.setMapOutputKeyClass(TextPair.class); //Для двойного ключа
 
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
