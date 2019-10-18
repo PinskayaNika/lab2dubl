@@ -1,6 +1,9 @@
 package com.examples.reduceside;
 
-
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
 
 public class CallsJoinMapper extends Mapper<LongWritable, Text, TextPair, Text> {
     @Override
