@@ -14,7 +14,7 @@ public class Slide {
     private final static String AIRPORT_CSV_PATH = "L_AIRPORT_ID.csv";
 
     public static void main(String[] args) throws Exception {
-        if (args.length != 2) {
+        if (args.length != 1) {
             System.err.println("Usage: Slide <input path> <output path>");
             System.exit(-1);
         }
@@ -24,10 +24,10 @@ public class Slide {
         MultipleInputs.addInputPath(job, new Path(FLIGHT_CSV_PATH), TextInputFormat.class, CallsJoinMapper.class);
         MultipleInputs.addInputPath(job, new Path(AIRPORT_CSV_PATH), TextInputFormat.class, SystemsJoinMapper.class);
 
-        FileOutputFormat.setOutputPath(job, new Path(args[2]));
+        FileOutputFormat.setOutputPath(job, new Path(args[0]));
 
-        job.setPartitionerClass(TextPair.Partitioner.class);
-        job.setGroupingComparatorClass(TextPair.GroupingComparatorClass.class);
+        job.setPartitionerClass(Partitioner.class);
+        job.setGroupingComparatorClass(GroupingComparatorClass.class);
         job.setReducerClass(JoinReducer.class);
         job.setMapOutputKeyClass(TextPair.class);
 
