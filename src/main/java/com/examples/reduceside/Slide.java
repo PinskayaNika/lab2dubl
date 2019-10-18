@@ -1,4 +1,5 @@
 package com.examples.reduceside;
+import org.apache.hadoop.mapred.lib.MultipleInputs;
 import org.apache.hadoop.mapreduce.Job;
 
 public class Slide {
@@ -11,5 +12,6 @@ public class Slide {
         Job job = Job.getInstance();
         job.setJarByClass(JoinJob.class);
         job.setJobName("JoinJob.sort");
+        MultipleInputs.
     }
 }
