@@ -9,6 +9,7 @@ public class Slide {
             System.exit(-1);
         }
         Job job = Job.getInstance();
-        job.setJarByClass(JoinJob sort)
+        job.setJarByClass(JoinJob.class);
+        job.setJobName("JoinJob.sort");
     }
 }
