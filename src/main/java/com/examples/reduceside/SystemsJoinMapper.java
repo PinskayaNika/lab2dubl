@@ -10,8 +10,8 @@ import java.io.IOException;
 public class SystemsJoinMapper extends Mapper<LongWritable, Text, TextPair, Text> {
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        Writable airportWritable = new Writable(value.toString());
-        Pair<String, String> airportPair = Writable.getAiroportPair();
+        AirportWritable airportWritable = new AirportWritable(value.toString());
+        Pair<String, String> airportPair = AirportWritable.getAiroportPair();
         try {
             context.write(new TextPair(airportPair.getKey(), "0"), new Text(airportPair.getValue()));
         } catch (NullPointerException e) {
