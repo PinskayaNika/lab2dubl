@@ -7,6 +7,6 @@ public class Slide {
             System.err.println("Usage: Slide <input path> <output path>");
             System.exit(-1);
         }
-        
+
     }
 }
