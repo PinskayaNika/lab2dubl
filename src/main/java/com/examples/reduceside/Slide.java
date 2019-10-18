@@ -1,5 +1,6 @@
 package com.examples.reduceside;
 import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.mapred.FileOutputFormat;
 import org.apache.hadoop.mapred.TextInputFormat;
 import org.apache.hadoop.mapred.lib.MultipleInputs;
 import org.apache.hadoop.mapreduce.Job;
@@ -17,8 +18,11 @@ public class Slide {
         MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, CallsJoinMapper.class);
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, SystemsJoinMapper.class);
 
+
+        FileOutputFormat.setOutputPath(job, new Path(args[2]));
+        job.setPartitionerClass(TextPair.FirstPartitioner.class);
         job.setMapperClass();
         job.setReducerClass(JoinReducer.class);
-        job.set
+
     }
 }
