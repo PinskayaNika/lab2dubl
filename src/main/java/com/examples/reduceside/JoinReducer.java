@@ -10,6 +10,8 @@ import java.util.Iterator;
 public class JoinReducer extends Reducer<TextPair, Text, Text, Text>  {
     @Override
     protected void reduce(TextPair key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
+        int counter = 0;
+
         Iterator<Text> iter = values.iterator();
         Text systemInfo = new Text(iter.next());
         while (iter.hasNext()) {
