@@ -6,7 +6,7 @@ import org.apache.hadoop.io.WritableComparator;
 
 //Учитывает только код аэропорта
 public class GroupingComparatorClass implements WritableComparator {
-    public FlightComparator() {     //Проверка кода аэропорта
+    public GroupingComparatorClass() {     //Проверка кода аэропорта
         super(TextPair.class, true);
     }
 
