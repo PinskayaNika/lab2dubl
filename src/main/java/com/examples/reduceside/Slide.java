@@ -23,6 +23,8 @@ public class Slide {
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, SystemsJoinMapper.class);
 
 
+        //fileInput
+
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
         job.setPartitionerClass(TextPair.FirstPartitioner.class);
         job.setGroupingComparatorClass(TextPair.FirstComparator.class);
