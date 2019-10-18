@@ -18,5 +18,7 @@ public class Slide {
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, SystemsJoinMapper.class);
 
         job.setMapperClass();
+        job.setReducerClass(JoinReducer.class);
+        job.set
     }
 }
