@@ -1,4 +1,6 @@
 package com.examples.reduceside;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.mapred.TextInputFormat;
 import org.apache.hadoop.mapred.lib.MultipleInputs;
 import org.apache.hadoop.mapreduce.Job;
 
@@ -10,8 +12,11 @@ public class Slide {
             System.exit(-1);
         }
         Job job = Job.getInstance();
-        job.setJarByClass(JoinJob.class);
+        job.setJarByClass(Slide.class);
         job.setJobName("JoinJob.sort");
-        MultipleInputs.
+        MultipleInputs.addInputPath(job, new Path(args[0]), TextInputFormat.class, CallsJoinMapper.class);
+        MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, SystemsJoinMapper.class);
+
+        job.setMapperClass();
     }
 }
