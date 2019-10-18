@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1e9413d0-5139-4315-8fad-b21366807332" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/CallsJoinMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/CallsJoinMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/FlightWritable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/FlightWritable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/SystemsJoinMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/SystemsJoinMapper.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,8 +51,8 @@
       <file leaf-file-name="CallsJoinMapper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/CallsJoinMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="399">
+              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -802,8 +800,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/CallsJoinMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="399">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

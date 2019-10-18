@@ -11,9 +11,13 @@ import java.io.IOException;
 public class CallsJoinMapper extends Mapper<LongWritable, Text, TextPair, Text> {
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        FlightWritable flightWritable = new flightWritable(value.toString());
+        FlightWritable flightWritable = new FlightWritable(value.toString());
         Pair<String, String> flightPair = flightWritable.getFlightPair();
-        context.write(new TextPair(flightWritable.getSystemA().toString(), "1"),
-                new Text(flightWritable.toString()));
+        try {
+            context.write(new TextPair(flightPair.getKey(), "1"),
+                    new Text(flightPair.getValue()));
+        } catch (NullPointerException e) {
+            System.out.println(e);
+        }
     }
 }
