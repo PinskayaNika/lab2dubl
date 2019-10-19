@@ -7,9 +7,9 @@ import java.io.IOException;
 import java.util.Iterator;
 
 
-public class JoinReducer extends Reducer<TextPair, Text, Text, Text>  {
+public class JoinReducer extends Reducer<JoinPair, Text, Text, Text>  {
     @Override
-    protected void reduce(TextPair key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
+    protected void reduce(JoinPair key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
         int counter = 0;
         Double min = Double.MAX_VALUE;
         Double max = Double.MIN_VALUE;
@@ -22,7 +22,7 @@ public class JoinReducer extends Reducer<TextPair, Text, Text, Text>  {
 
             //Change
             Text outValue = new Text(call.toString() + "\t" + systemInfo.toString());
-            context.write(key.getFirst(), outValue);
+            context.write(key.getAirportID(), outValue);
 
 
         }

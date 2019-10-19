@@ -22,15 +22,15 @@ public class Slide {
         Job job = Job.getInstance();
         job.setJarByClass(Slide.class);
         job.setJobName("JoinJob.sort");
-        MultipleInputs.addInputPath(job, new Path(FLIGHT_CSV_PATH), TextInputFormat.class, CallsJoinMapper.class);
-        MultipleInputs.addInputPath(job, new Path(AIRPORT_CSV_PATH), TextInputFormat.class, SystemsJoinMapper.class);
+        MultipleInputs.addInputPath(job, new Path(FLIGHT_CSV_PATH), TextInputFormat.class, FlightMapper.class);
+        MultipleInputs.addInputPath(job, new Path(AIRPORT_CSV_PATH), TextInputFormat.class, AirportMapper.class);
 
         FileOutputFormat.setOutputPath(job, new Path(args[0]));
 
         job.setPartitionerClass(Partitioner.class);
         job.setGroupingComparatorClass(GroupingComparatorClass.class);
         job.setReducerClass(JoinReducer.class);
-        job.setMapOutputKeyClass(TextPair.class); //Для двойного ключа
+        job.setMapOutputKeyClass(JoinPair.class); //Для двойного ключа
 
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);

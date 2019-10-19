@@ -8,7 +8,7 @@ public abstract class Partitioner {
 
     }
 
-    public abstract int getPartition (TextPair key, Text value, int numPartitions) {
+    public abstract int getPartition (JoinPair key, Text value, int numPartitions) {
         int airportID = new Integer(key.getAirportID());
         return  airportID % numPartitions;
     }

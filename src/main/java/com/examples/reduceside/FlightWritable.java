@@ -7,6 +7,7 @@ public class FlightWritable {
     private final static int FLIGHT_DELAY = 17;
     private final static int TOTAL = 18;
     private static final String DELIMITER = ",";
+    private static final String SKIPPED_STRING = "YEAR";
 
     private Pair<String, String> flightPair;
 
@@ -14,7 +15,7 @@ public class FlightWritable {
         String id, delay;
         System.out.println(flight);
 
-        if ((!flight.contains("YEAR")) && (flight.length() > 1)) {
+        if ((!flight.contains(SKIPPED_STRING)) && (flight.length() > 1)) {
             String[] table = flight.split(DELIMITER);
             if (table.length < TOTAL) {
                 return;
