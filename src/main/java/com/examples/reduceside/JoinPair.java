@@ -22,61 +22,44 @@ public class JoinPair implements WritableComparable<JoinPair> {
     }
 
 
-    //@Override
+    @Override
     public void readFields(DataInput in) throws IOException {
         String stringLine = in.readLine();
-        airportID.readFields(in);
-        flag.readFields(in);
+        int sizeLine = stringLine.length();
+        flag = stringLine.charAt(sizeLine - 1);  //считываем флаг
+        airportID = stringLine.substring(0, sizeLine - 1);  //ID
     }
 
-    //@Override
+    @Override
     public void write(DataOutput out) throws  IOException {
-        out.write(airportID);
-        out.write(flag);
+        out.writeChars(airportID);
+        out.writeInt(flag);
     }
 
-
-
-
-
-    public JoinPair(String first, String second) {
-        this.airportID = new Text(first);
-        this.flag = new Text(second);
-    }
-
-    public Text getAirportID() {
+    public String getAirportID() {
         return airportID;
     }
 
-    public void setAirportID(Text airportID) {
-        this.airportID = airportID;
-    }
 
-    public Text getFlag() {
+    public int getFlag() {
         return flag;
     }
 
-    public void setFlag(Text flag) {
-        this.flag = flag;
-    }
 
-    public void set(Text first, Text second) {
-        this.airportID = first;
-        this.flag = second;
+    public int compareToFirstPart(JoinPair other) {
+        return airportID.compareTo(other.getAirportID());
     }
 
     @Override
-    public int hashCode() {
-        return airportID.hashCode() * 163 + flag.hashCode();
-    }
+    public int compareTo(JoinPair other) {
+        int cmp = airportID.compareTo(other.getAirportID());  //Сравниваем по строкам ID
+        int oterFlag = other.getFlag();
+//        if (cmp != 0) {
+//            return flag - oterFlag;
+//        }
+//        return cmp;
+        return cmp == 0 ? flag - oterFlag : cmp;
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof JoinPair) {
-            JoinPair tp = (JoinPair) obj;
-            return airportID.equals(tp.getAirportID()) && flag.equals(tp.getFlag());
-        }
-        return false;
     }
 
     @Override
@@ -85,21 +68,5 @@ public class JoinPair implements WritableComparable<JoinPair> {
     }
 
 
-    //@Override
-    public int compareToFirstPart(JoinPair other) {
-        return airportID.compareTo(other.getAirportID());
-    }
 
-    @Override
-    public int compareTo(JoinPair tp) {
-        int cmp = airportID.compareTo(tp.getAirportID());
-        if (cmp != 0) {
-            return cmp;
-        }
-        return flag.compareTo(tp.getFlag());
-    }
-
-    public JoinPair reverse() {
-        return new JoinPair(flag, airportID);
-    }
 }
