@@ -13,7 +13,7 @@ public class AirportMapper extends Mapper<LongWritable, Text, JoinPair, Text> {
         AirportWritable airportWritable = new AirportWritable(value.toString());
         Pair<String, String> airportPair = airportWritable.getAirportPair();
         try {
-            context.write(new JoinPair(airportPair.getKey(), "0"), new Text(airportPair.getValue()));
+            context.write(new JoinPair(airportPair.getKey(), 0), new Text(airportPair.getValue()));
         } catch (NullPointerException e) {
             System.out.println(e);
         }

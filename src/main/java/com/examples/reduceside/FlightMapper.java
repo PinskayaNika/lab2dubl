@@ -13,7 +13,7 @@ public class FlightMapper extends Mapper<LongWritable, Text, JoinPair, Text> {
         FlightWritable flightWritable = new FlightWritable(value.toString());
         Pair<String, String> flightPair = flightWritable.getFlightPair();
         try {
-            context.write(new JoinPair(flightPair.getKey(), "1"),
+            context.write(new JoinPair(flightPair.getKey(), 1),
                     new Text(flightPair.getValue()));
         } catch (NullPointerException e) {
             System.out.println(e);
