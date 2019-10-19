@@ -15,11 +15,20 @@ public class JoinReducer extends Reducer<JoinPair, Text, Text, Text>  {
         Double max = Double.MIN_VALUE;
         Double currentDelay, sum = 0.0;
 
-        Iterator<Text> iter = values.iterator();
-        Text systemInfo = new Text(iter.next());
-        while (iter.hasNext()) {
-            Text call = iter.next();
+        Iterator iterator = values.iterator();
+        String airportName = iterator.next().toString();
 
+        while (iterator.hasNext()) {
+            String call = iterator.next().toString();
+
+            if (call.length() == 0) {
+                continue;
+            }
+
+            currentDelay = new Double(call);
+            if (currentDelay == 0.0) {
+                continue;
+            }
             //Change
             Text outValue = new Text(call.toString() + "\t" + systemInfo.toString());
             context.write(key.getAirportID(), outValue);
