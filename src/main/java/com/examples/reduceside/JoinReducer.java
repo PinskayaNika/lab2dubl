@@ -26,11 +26,25 @@ public class JoinReducer extends Reducer<JoinPair, Text, Text, Text>  {
             }
 
             currentDelay = new Double(call);
+
             if (currentDelay == 0.0) {
                 continue;
             }
-            //Change
-            Text outValue = new Text(call.toString() + "\t" + systemInfo.toString());
+
+            if (counter == 0 || max < currentDelay) {
+                max = currentDelay;
+            }
+
+            if (counter == 0 || min > currentDelay) {
+                min = currentDelay;
+            }
+
+            sum = sum + currentDelay;
+            counter = counter + 1;
+        }
+
+        if (counter > 0) {
+            String outValue = new Text(call.toString() + "\t" + systemInfo.toString());
             context.write(key.getAirportID(), outValue);
 
 
