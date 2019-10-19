@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e9413d0-5139-4315-8fad-b21366807332" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/AirportWritable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/AirportWritable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/FlightMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/FlightMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/FlightWritable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/FlightWritable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/GroupingComparatorClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/GroupingComparatorClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/JoinPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/JoinPair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/JoinReducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/JoinReducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/Partitioner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/Partitioner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/Slide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/Slide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/SystemsJoinMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/AirportMapper.java" afterDir="false" />
-    </list>
+    <list default="true" id="1e9413d0-5139-4315-8fad-b21366807332" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,8 +25,8 @@
       <file leaf-file-name="JoinPair.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/JoinPair.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+            <state relative-caret-position="209">
+              <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#684#685#0" expanded="true" />
@@ -829,8 +819,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/JoinPair.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+        <state relative-caret-position="209">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#684#685#0" expanded="true" />
