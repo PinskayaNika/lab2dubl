@@ -6,6 +6,9 @@ public class AirportWritable {
     private Pair<String, String> airportPair;
 
     public AirportWritable(String airport) {
-        int devide =
+        int share ;
+        String airportID, airportName;
+
+        if (!airport.contains(""))
     }
 }
