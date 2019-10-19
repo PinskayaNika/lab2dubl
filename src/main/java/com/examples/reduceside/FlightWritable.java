@@ -3,7 +3,7 @@ package com.examples.reduceside;
 import javafx.util.Pair;
 
 public class FlightWritable {
-    private final static int AIRPORT_DEST_ID = 14;
+    private final static int AIRPORT_DESTINATION_ID = 14;
     private final static int FLIGHT_DELAY = 17;
     private final static int TOTAL = 18;
     private static final String DELIMITER = ",";
@@ -19,7 +19,7 @@ public class FlightWritable {
             if (table.length < TOTAL) {
                 return;
             }
-            id = table[AIRPORT_DEST_ID];
+            id = table[AIRPORT_DESTINATION_ID];
             delay = table[FLIGHT_DELAY];
             if ((!id.isEmpty()) && (!delay.isEmpty())) {
                 this.flightPair = new Pair<String, String>(id, delay);
@@ -27,6 +27,8 @@ public class FlightWritable {
         }
     }
 
-    public Pair<String, String>
+    public Pair<String, String> getFlightPair() {
+        return flightPair;
+    }
 
 }
