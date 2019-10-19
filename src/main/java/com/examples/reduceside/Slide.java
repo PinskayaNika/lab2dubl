@@ -16,7 +16,7 @@ public class Slide {
 
     public static void main(String[] args) throws Exception {
         if (args.length != 1) {
-            System.err.println("Usage: Slide <input path> <output path>");
+            System.err.println("Usage: Slide <output path>");
             System.exit(-1);
         }
         Job job = Job.getInstance();
