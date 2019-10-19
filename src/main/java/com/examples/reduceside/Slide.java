@@ -12,7 +12,7 @@ import org.apache.hadoop.io.Text;
 public class Slide {
     private final static String FLIGHT_CSV_PATH = "664600583_T_ONTIME_sample.csv";
     private final static String AIRPORT_CSV_PATH = "L_AIRPORT_ID.csv";
-    private final static String 
+    //public final static String DELIMITER = ",";
 
     public static void main(String[] args) throws Exception {
         if (args.length != 1) {
