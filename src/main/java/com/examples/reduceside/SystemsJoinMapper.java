@@ -11,7 +11,7 @@ public class SystemsJoinMapper extends Mapper<LongWritable, Text, TextPair, Text
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         AirportWritable airportWritable = new AirportWritable(value.toString());
-        Pair<String, String> airportPair = AirportWritable.getAiroportPair();
+        Pair<String, String> airportPair = airportWritable.getAirportPair();
         try {
             context.write(new TextPair(airportPair.getKey(), "0"), new Text(airportPair.getValue()));
         } catch (NullPointerException e) {

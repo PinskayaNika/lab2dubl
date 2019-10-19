@@ -9,6 +9,17 @@ public class AirportWritable {
         int share ;
         String airportID, airportName;
 
-        if (!airport.contains("Description"))
+        if (!airport.contains("Description")) {
+            share = airport.indexOf(",");
+            airportID = airport.substring(1, share - 1);
+            airportName = airport.substring(share + 2, airport.length() - 1);
+            if (!airportID.isEmpty() && !airportName.isEmpty()) {
+                airportPair = new Pair<String, String>(airportID, airportName);
+            }
+        }
+    }
+
+    public Pair<String, String> getAirportPair() {
+        return airportPair;
     }
 }
