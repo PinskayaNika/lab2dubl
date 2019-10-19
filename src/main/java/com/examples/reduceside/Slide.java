@@ -15,7 +15,7 @@ public class Slide {
     //public final static String DELIMITER = ",";
 
     public static void main(String[] args) throws Exception {
-        if (args.length != 1) {
+        if (args.length != 3) {
             System.err.println("Usage: Slide <output path>");
             System.exit(-1);
         }
