@@ -9,6 +9,6 @@ public class AirportWritable {
         int share ;
         String airportID, airportName;
 
-        if (!airport.contains(""))
+        if (!airport.contains("Description"))
     }
 }
