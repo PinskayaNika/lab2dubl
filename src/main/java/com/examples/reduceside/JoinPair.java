@@ -62,10 +62,10 @@ public class JoinPair implements WritableComparable<JoinPair> {
 
     }
 
-//    @Override
-//    public String toString() {
-//        return  airportID + "\t" + flag;
-//    }
+    @Override
+    public String toString() {
+        return  airportID + "\t" + flag;
+    }
 
 
 
