@@ -44,8 +44,10 @@ public class JoinReducer extends Reducer<JoinPair, Text, Text, Text>  {
         }
 
         if (counter > 0) {
-            String outValue = new Text(call.toString() + "\t" + systemInfo.toString());
-            context.write(key.getAirportID(), outValue);
+            String outValue = "".concat("[Min: ".concat(min.toString().concat(", ")));
+            outValue = outValue.concat("Max: ").concat(max.toString()).concat(", ");
+            outValue = outValue.concat("Avg: ").concat(new Double(Math.round(10.0 * (sum / counter)) /10.0).toString().concat("];"));
+            context.write(new Text(airportName), new Text(outValue));
 
 
         }
