@@ -25,7 +25,7 @@ public class Slide {
         MultipleInputs.addInputPath(job, new Path(FLIGHT_CSV_PATH), TextInputFormat.class, FlightMapper.class);
         MultipleInputs.addInputPath(job, new Path(AIRPORT_CSV_PATH), TextInputFormat.class, AirportMapper.class);
 
-        FileOutputFormat.setOutputPath(job, new Path(args[0]));
+        FileOutputFormat.setOutputPath(job, new Path(args[2]));
 
         job.setReducerClass(JoinReducer.class);
         job.setGroupingComparatorClass(GroupingComparatorClass.class);
