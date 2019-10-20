@@ -31,7 +31,7 @@ public class Slide {
 
 
 
-        FileOutputFormat.setOutputPath(job, new Path(args[2]));
+        FileOutputFormat.setOutputPath(job, new Path(args[0]));
 
         job.setReducerClass(JoinReducer.class);
         job.setGroupingComparatorClass(GroupingComparatorClass.class);
