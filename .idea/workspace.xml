@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1e9413d0-5139-4315-8fad-b21366807332" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/Slide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/Slide.java" afterDir="false" />
-    </list>
+    <list default="true" id="1e9413d0-5139-4315-8fad-b21366807332" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,8 +48,8 @@
       <file leaf-file-name="Slide.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/Slide.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+            <state relative-caret-position="456">
+              <caret line="33" column="59" lean-forward="true" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -177,7 +175,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="17" />
     <option name="y" value="25" />
     <option name="width" value="1005" />
@@ -309,7 +307,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="17" y="25" width="1005" height="908" extended-state="0" />
+    <frame x="17" y="25" width="1005" height="908" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -837,8 +835,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/Slide.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        <state relative-caret-position="456">
+          <caret line="33" column="59" lean-forward="true" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
