@@ -16,7 +16,7 @@ public class JoinPair implements WritableComparable<JoinPair> {
         this.airportID = airportID;
         this.flag = flag;
     }
-    
+
     public JoinPair(){}
 
     @Override
