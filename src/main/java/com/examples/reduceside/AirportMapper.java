@@ -21,7 +21,7 @@ public class AirportMapper extends Mapper<LongWritable, Text, JoinPair, Text> {
       Text airportName;
         String[] string = value.toString().split(DELIMITER);
       if (key.get() > 0) {
-          airportName = 
+          airportName = new Text(remote(string[]))
 
       }
     }
