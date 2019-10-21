@@ -16,7 +16,8 @@ public class JoinPair implements WritableComparable<JoinPair> {
         this.airportID = airportID;
         this.flag = flag;
     }
-
+    
+    public JoinPair(){}
 
     @Override
     public void readFields(DataInput in) throws IOException {
