@@ -10,13 +10,16 @@ import java.io.IOException;
 public class FlightMapper extends Mapper<LongWritable, Text, JoinPair, Text> {
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-        FlightWritable flightWritable = new FlightWritable(value.toString());
-        Pair<String, String> flightPair = flightWritable.getFlightPair();
-        try {
-            context.write(new JoinPair(flightPair.getKey(), 1),
-                    new Text(flightPair.getValue()));
-        } catch (NullPointerException e) {
-            System.out.println(e);
+        Text airportName;
+        int airportId;
+        String[] string = value.toString().split(DELIMITER);
+        if (key.get() > 0) {
+            airportName = new Text(remote(string[AIRPORT_NAME]));
+            airportId = Integer.parseInt(remote(string[AIRPORT_ID]));
+
+            JoinPair Key = new JoinPair(airportId, 0);
+            context.write(Key, airportName);
         }
+
     }
 }

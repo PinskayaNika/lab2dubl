@@ -2,21 +2,17 @@ package com.examples.reduceside;
 
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.WritableComparable;
+import org.omg.PortableInterceptor.INACTIVE;
 
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
 public class JoinPair implements WritableComparable<JoinPair> {
-    public String airportID;
+    public int airportID;
     public int flag;
 
-    public JoinPair() {
-        this.airportID = "null";
-        this.flag = -1;
-    }
-
-    public JoinPair(String airportID, int flag) {
+    public JoinPair(int airportID, int flag) {
         this.airportID = airportID;
         this.flag = flag;
     }
@@ -24,19 +20,17 @@ public class JoinPair implements WritableComparable<JoinPair> {
 
     @Override
     public void readFields(DataInput in) throws IOException {
-        String stringLine = in.readLine();
-        int sizeLine = stringLine.length();
-        flag = stringLine.charAt(sizeLine - 1);  //считываем флаг
-        airportID = stringLine.substring(0, sizeLine - 1);  //ID
+        flag = in.readInt(); //считываем флаг
+        airportID = in.readInt();  //ID
     }
 
     @Override
     public void write(DataOutput out) throws  IOException {
-        out.writeChars(airportID);
+        out.writeInt(airportID);
         out.writeInt(flag);
     }
 
-    public String getAirportID() {
+    public int getAirportID() {
         return airportID;
     }
 
@@ -47,19 +41,29 @@ public class JoinPair implements WritableComparable<JoinPair> {
 
 
     public int compareToFirstPart(JoinPair other) {
-        return airportID.compareTo(other.getAirportID());
+        JoinPair second = other;
+        if (this.airportID > second.airportID) {
+            return 1;
+        } else  if (this.airportID < second.airportID) {
+            return -1;
+        }
+        return 0;
     }
 
     @Override
     public int compareTo(JoinPair other) {
-        int cmp = airportID.compareTo(other.getAirportID());  //Сравниваем по строкам ID
-        int oterFlag = other.getFlag();
-//        if (cmp != 0) {
-//            return flag - oterFlag;
-//        }
-//        return cmp;
-        return cmp == 0 ? flag - oterFlag : cmp;
-
+        JoinPair a = other;
+        if (this.airportID > a.airportID) {
+            return 1;
+        } else  if (this.airportID < a.airportID) {
+            return -1;
+        }
+        if (this.flag > a.flag) {
+            return 1;
+        } else  if (this.flag < a.flag) {
+            return -1;
+        }
+        return 0;
     }
 
     @Override
