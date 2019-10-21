@@ -4,12 +4,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Partitioner;
 
 //Учитывает только код аэропорта
-public abstract class FlightPartitioner extends Partitioner
-{
-    public FlightPartitioner() {
-
-    }
-
+public abstract class FlightPartitioner extends Partitioner<JoinPair, Text> {
     public int getPartition (JoinPair key, Text value, int numPartitions) {
         int airportID = new Integer(key.getAirportID());
         return  airportID % numPartitions;
