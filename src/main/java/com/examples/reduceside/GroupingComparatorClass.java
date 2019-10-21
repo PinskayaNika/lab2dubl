@@ -15,7 +15,7 @@ public class GroupingComparatorClass extends WritableComparator {
         JoinPair Key1 = (JoinPair) a;
         JoinPair Key2 = (JoinPair) b;
 
-        return Key2.compareToFirstPart(Key1);
+        return Key1.compareToFirstPart(Key2);
     }
 }
 

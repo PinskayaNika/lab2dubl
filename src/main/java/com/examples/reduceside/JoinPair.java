@@ -21,8 +21,9 @@ public class JoinPair implements WritableComparable<JoinPair> {
 
     @Override
     public void readFields(DataInput in) throws IOException {
-        flag = in.readInt(); //считываем флаг
         airportID = in.readInt();  //ID
+        flag = in.readInt(); //считываем флаг
+
     }
 
     @Override
@@ -67,10 +68,10 @@ public class JoinPair implements WritableComparable<JoinPair> {
         return 0;
     }
 
-    @Override
-    public String toString() {
-        return  airportID + "\t" + flag;
-    }
+//    @Override
+//    public String toString() {
+//        return  airportID + "\t" + flag;
+//    }
 
 
 

@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e9413d0-5139-4315-8fad-b21366807332" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/AirportWritable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/FlightWritable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/Slide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/Slide.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/FlightPartitioner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/FlightPartitioner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/GroupingComparatorClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/GroupingComparatorClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/JoinPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/examples/reduceside/JoinPair.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,24 +17,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JoinPair.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/JoinPair.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1000#1001#0" expanded="true" />
-                <element signature="e#1032#1033#0" expanded="true" />
-                <element signature="e#1061#1062#0" expanded="true" />
-                <element signature="e#1088#1089#0" expanded="true" />
-                <element signature="e#1593#1594#0" expanded="true" />
-                <element signature="e#1640#1641#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="JoinReducer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/JoinReducer.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -47,7 +29,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Slide.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JoinPair.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/JoinPair.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="70" column="4" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1000#1001#0" expanded="true" />
+                <element signature="e#1032#1033#0" expanded="true" />
+                <element signature="e#1061#1062#0" expanded="true" />
+                <element signature="e#1088#1089#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Slide.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/Slide.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="369">
@@ -88,8 +86,8 @@
       <file leaf-file-name="FlightPartitioner.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/FlightPartitioner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+            <state relative-caret-position="114">
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,11 +95,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GroupingComparatorClass.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GroupingComparatorClass.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/GroupingComparatorClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+            <state relative-caret-position="285">
+              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#268#269#0" expanded="true" />
@@ -145,11 +143,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/examples/reduceside/Partitioner.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/examples/reduceside/AirportMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/examples/reduceside/FlightMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/examples/reduceside/FlightPartitioner.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/examples/reduceside/JoinPair.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/examples/reduceside/GroupingComparatorClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/examples/reduceside/JoinReducer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/examples/reduceside/Slide.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/examples/reduceside/JoinPair.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/examples/reduceside/FlightPartitioner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/examples/reduceside/GroupingComparatorClass.java" />
       </list>
     </option>
   </component>
@@ -393,8 +391,6 @@
             <element signature="e#1032#1033#0" expanded="true" />
             <element signature="e#1061#1062#0" expanded="true" />
             <element signature="e#1088#1089#0" expanded="true" />
-            <element signature="e#1593#1594#0" expanded="true" />
-            <element signature="e#1640#1641#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -457,8 +453,6 @@
             <element signature="e#1032#1033#0" expanded="true" />
             <element signature="e#1061#1062#0" expanded="true" />
             <element signature="e#1088#1089#0" expanded="true" />
-            <element signature="e#1593#1594#0" expanded="true" />
-            <element signature="e#1640#1641#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -544,8 +538,6 @@
             <element signature="e#1032#1033#0" expanded="true" />
             <element signature="e#1061#1062#0" expanded="true" />
             <element signature="e#1088#1089#0" expanded="true" />
-            <element signature="e#1593#1594#0" expanded="true" />
-            <element signature="e#1640#1641#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -617,38 +609,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/CompositeInputFormat.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/add.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/FlightPartitioner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/FlightMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/GroupingComparatorClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#341#342#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/AirportMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -689,28 +649,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/JoinPair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1000#1001#0" expanded="true" />
-            <element signature="e#1032#1033#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#1088#1089#0" expanded="true" />
-            <element signature="e#1593#1594#0" expanded="true" />
-            <element signature="e#1640#1641#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/Slide.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="369">
           <caret line="24" column="99" lean-forward="true" selection-start-line="24" selection-start-column="99" selection-end-line="24" selection-end-column="99" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/JoinPair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="70" column="4" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1000#1001#0" expanded="true" />
+            <element signature="e#1032#1033#0" expanded="true" />
+            <element signature="e#1061#1062#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/FlightMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/FlightPartitioner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/examples/reduceside/GroupingComparatorClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#268#269#0" expanded="true" />
+            <element signature="e#341#342#0" expanded="true" />
           </folding>
         </state>
       </provider>
