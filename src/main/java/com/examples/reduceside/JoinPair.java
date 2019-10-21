@@ -8,7 +8,7 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-public class JoinPair implements WritableComparable<JoinPair> {
+public class JoinPair implements WritableComparable {
     public int airportID;
     public int flag;
 
@@ -52,9 +52,9 @@ public class JoinPair implements WritableComparable<JoinPair> {
         return 0;
     }
 
-    @Override
-    public int compareTo(JoinPair other) {
-        JoinPair a = other;
+    //@Override
+    public int compareTo(Object other) {
+        JoinPair a = (JoinPair) other;
         if (this.airportID > a.airportID) {
             return 1;
         } else  if (this.airportID < a.airportID) {
@@ -68,7 +68,7 @@ public class JoinPair implements WritableComparable<JoinPair> {
         return 0;
     }
 
-//    @Override
+   //    @Override
 //    public String toString() {
 //        return  airportID + "\t" + flag;
 //    }
