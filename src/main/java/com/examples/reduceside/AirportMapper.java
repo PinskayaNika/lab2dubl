@@ -18,6 +18,11 @@ public class AirportMapper extends Mapper<LongWritable, Text, JoinPair, Text> {
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-      String[] string = value.toString().split()
+      Text airportName;
+        String[] string = value.toString().split(DELIMITER);
+      if (key.get() > 0) {
+          airportName = 
+
+      }
     }
 }
