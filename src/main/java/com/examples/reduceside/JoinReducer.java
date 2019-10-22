@@ -17,6 +17,8 @@ public class JoinReducer extends Reducer<JoinPair, Text, Text, Text>  {
 */
         Iterator iterator = values.iterator();
        // String airportName = iterator.next().toString();
+        Text airportName = new Text(iterator.next().toString());
+
 
         if (iterator.hasNext()) {
             int counter = 0;
