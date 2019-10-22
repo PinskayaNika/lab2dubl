@@ -1,7 +1,0 @@
-com/examples/reduceside/AirportMapper.class
-com/examples/reduceside/Slide.class
-com/examples/reduceside/GroupingComparatorClass.class
-com/examples/reduceside/FlightMapper.class
-com/examples/reduceside/FlightPartitioner.class
-com/examples/reduceside/JoinReducer.class
-com/examples/reduceside/JoinPair.class
