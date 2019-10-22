@@ -34,8 +34,9 @@ public class Slide {
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
 
         job.setReducerClass(JoinReducer.class);
-        job.setGroupingComparatorClass(GroupingComparatorClass.class);
         job.setPartitionerClass(FlightPartitioner.class);
+        job.setGroupingComparatorClass(GroupingComparatorClass.class);
+
         job.setMapOutputKeyClass(JoinPair.class); //Для двойного ключа
         job.setMapOutputValueClass(Text.class);
         job.setOutputKeyClass(Text.class);
