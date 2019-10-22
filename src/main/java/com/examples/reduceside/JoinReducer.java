@@ -16,7 +16,7 @@ public class JoinReducer extends Reducer<JoinPair, Text, Text, Text>  {
         Double currentDelay, sum = 0.0;
 */
         Iterator iterator = values.iterator();
-        String airportName = iterator.next().toString();
+       // String airportName = iterator.next().toString();
 
         if (iterator.hasNext()) {
             int counter = 0;
