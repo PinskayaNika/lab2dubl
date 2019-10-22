@@ -53,7 +53,7 @@ public class AirportMapper extends Mapper<LongWritable, Text, JoinPair, Text> {
 
 
     public static String remote(String string) {
-        return  string.replaceAll(QUITE, EMPTY);
+        return  string.replaceAll(EMPTY, QUITE);
     }
 
     @Override
