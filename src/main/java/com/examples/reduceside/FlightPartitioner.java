@@ -12,3 +12,4 @@ public class FlightPartitioner extends Partitioner<JoinPair, Text> {
         return key.getAirportID() % numPartitions;
     }
 }
+
