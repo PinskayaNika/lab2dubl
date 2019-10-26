@@ -15,7 +15,7 @@ public class FlightMapper extends Mapper<LongWritable, Text, JoinPair, Text> {
     private static final String DELIMITER = ",";
 
 
-    private Optional<String> getOptionalDelay(String string) {
+    private Optional<String> parsePositiveValues(String string) {
         if (string.isEmpty() || Float.parseFloat(string) < 0.0f) {
             return Optional.empty();
         } else {
@@ -26,10 +26,10 @@ public class FlightMapper extends Mapper<LongWritable, Text, JoinPair, Text> {
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         int airportId;
-        String[] string = value.toString().split(DELIMITER);
+        String[] arrColumn = value.toString().split(DELIMITER);
         if (key.get() > 0) {
-            airportId = Integer.parseInt(string[AIRPORT_DESTINATION_ID]);
-            Optional<String> delay = getOptionalDelay(string[TOTAL]);
+            airportId = Integer.parseInt(arrColumn[AIRPORT_DESTINATION_ID]);
+            Optional<String> delay = parsePositiveValues(arrColumn[TOTAL]);
 
             if (delay.isPresent()) {
                 JoinPair Key = new JoinPair(airportId, 1);

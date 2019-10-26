@@ -15,18 +15,18 @@ public class JoinReducer extends Reducer<JoinPair, Text, Text, Text>  {
         Double max = Double.MIN_VALUE;
         Double currentDelay, sum = 0.0;
 */
-        Iterator iterator = values.iterator();
-       // String airportName = iterator.next().toString();
-        Text airportName = new Text(iterator.next().toString());
+        Iterator iter = values.iterator();
+       // String airportName = iter.next().toString();
+        Text airportName = new Text(iter.next().toString());
 
 
-        if (iterator.hasNext()) {
+        if (iter.hasNext()) {
             int counter = 0;
             Double min = Double.MAX_VALUE;
             Double max = Double.MIN_VALUE;
             Double currentDelay, sum = 0.0;
-            while (iterator.hasNext()) {
-                String call = iterator.next().toString();
+            while (iter.hasNext()) {
+                String call = iter.next().toString();
 
                 if (call.length() == 0) {
                     continue;
@@ -50,10 +50,10 @@ public class JoinReducer extends Reducer<JoinPair, Text, Text, Text>  {
                 counter++;
             }
 
-                String outValue = "".concat("[Min: ".concat(min.toString().concat(", ")));
-                outValue = outValue.concat("Max: ").concat(max.toString()).concat(", ");
-                outValue = outValue.concat("Avg: ").concat(new Double(Math.round(10.0 * (sum / counter)) / 10.0).toString().concat("];"));
-                context.write(new Text(airportName), new Text(outValue));
+            String outValue = "".concat("[Min: ".concat(min.toString().concat(", ")));
+            outValue = outValue.concat("Max: ").concat(max.toString()).concat(", ");
+            outValue = outValue.concat("Avg: ").concat(new Double(Math.round(10.0 * (sum / counter)) / 10.0).toString().concat("];"));
+            context.write(new Text(airportName), new Text(outValue));
             //  Text Result = new Text("min: " + Float.toString(min) + ", max: " + Float.toString(max) + ", diff: " + Float.toString(sum));
             // context.write(airportName, Result);
 
