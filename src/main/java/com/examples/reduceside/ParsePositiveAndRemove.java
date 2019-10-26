@@ -2,7 +2,7 @@ package com.examples.reduceside;
 
 import java.util.Optional;
 
-public class ParseRemove {
+public class ParsePositiveAndRemove {
     private static final String EMPTY = "";
     private static final String QUITE = "\"";
 
