@@ -2,7 +2,7 @@ package com.examples.reduceside;
 
 import java.util.Optional;
 
-class ParsePositiveAndRemove {
+class StringUtils {
     private static final String EMPTY = "";
     private static final String QUITE = "\"";
 
@@ -13,7 +13,7 @@ class ParsePositiveAndRemove {
             return Optional.of(value );
         }
     }
-    static String remove(String value) {
+    static String removeQuots(String value) {
         return  value.replaceAll(QUITE, EMPTY);
     }
 
