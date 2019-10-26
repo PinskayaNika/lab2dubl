@@ -46,14 +46,17 @@ public class JoinReducer extends Reducer<JoinPair, Text, Text, Text>  {
                     min = currentDelay;
                 }
 
-                sum = sum + currentDelay;
-                counter = counter + 1;
+                sum += currentDelay;
+                counter++;
             }
 
                 String outValue = "".concat("[Min: ".concat(min.toString().concat(", ")));
                 outValue = outValue.concat("Max: ").concat(max.toString()).concat(", ");
                 outValue = outValue.concat("Avg: ").concat(new Double(Math.round(10.0 * (sum / counter)) / 10.0).toString().concat("];"));
                 context.write(new Text(airportName), new Text(outValue));
+            //  Text Result = new Text("min: " + Float.toString(min) + ", max: " + Float.toString(max) + ", diff: " + Float.toString(sum));
+            // context.write(airportName, Result);
+
         }
 
     }
