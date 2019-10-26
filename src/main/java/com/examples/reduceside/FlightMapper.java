@@ -29,7 +29,7 @@ public class FlightMapper extends Mapper<LongWritable, Text, JoinPair, Text> {
         String[] arrColumn = value.toString().split(DELIMITER);
         if (key.get() > 0) {
             airportId = Integer.parseInt(arrColumn[AIRPORT_DESTINATION_ID]);
-            Optional<String> delay = parsePositiveValues(arrColumn[TOTAL]);
+            Optional<String> delay = ParseRemove.parsePositiveValues(arrColumn[TOTAL]);
 
             if (delay.isPresent()) {
                 JoinPair Key = new JoinPair(airportId, 1);
