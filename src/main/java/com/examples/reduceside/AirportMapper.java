@@ -1,9 +1,7 @@
 package com.examples.reduceside;
 
-import javafx.util.Pair;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
-import org.apache.hadoop.io.WritableComparable;
 import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
@@ -16,7 +14,7 @@ public class AirportMapper extends Mapper<LongWritable, Text, JoinPair, Text> {
     private static final int AIRPORT_NAME = 1;
 
 
-    public static String remote(String string) {
+    public static String remove(String string) {
         return  string.replaceAll(QUITE, EMPTY);
     }
 
@@ -26,8 +24,8 @@ public class AirportMapper extends Mapper<LongWritable, Text, JoinPair, Text> {
       int airportId;
         String[] string = value.toString().split(DELIMITER);
       if (key.get() > 0) {
-          airportName = new Text(remote(string[AIRPORT_NAME]));
-          airportId = Integer.parseInt(remote(string[AIRPORT_ID]));
+          airportName = new Text(remove(string[AIRPORT_NAME]));
+          airportId = Integer.parseInt(remove(string[AIRPORT_ID]));
 
           JoinPair Key = new JoinPair(airportId, 0);
           context.write(Key, airportName);
