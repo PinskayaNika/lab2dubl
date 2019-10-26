@@ -24,8 +24,8 @@ public class AirportMapper extends Mapper<LongWritable, Text, JoinPair, Text> {
       int airportId;
         String[] arrColumn = value.toString().split(DELIMITER);
       if (key.get() > 0) {
-          airportName = new Text(ParseRemove.remove(arrColumn[AIRPORT_NAME]));
-          airportId = Integer.parseInt(ParseRemove.remove(arrColumn[AIRPORT_ID]));
+          airportName = new Text(ParsePositiveAndRemove.remove(arrColumn[AIRPORT_NAME]));
+          airportId = Integer.parseInt(ParsePositiveAndRemove.remove(arrColumn[AIRPORT_ID]));
 
           JoinPair Key = new JoinPair(airportId, 0);
           context.write(Key, airportName);

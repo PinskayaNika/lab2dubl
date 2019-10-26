@@ -1,12 +1,10 @@
 package com.examples.reduceside;
 
-import javafx.util.Pair;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
-import java.io.OptionalDataException;
 import java.util.Optional;
 
 public class FlightMapper extends Mapper<LongWritable, Text, JoinPair, Text> {
@@ -29,7 +27,7 @@ public class FlightMapper extends Mapper<LongWritable, Text, JoinPair, Text> {
         String[] arrColumn = value.toString().split(DELIMITER);
         if (key.get() > 0) {
             airportId = Integer.parseInt(arrColumn[AIRPORT_DESTINATION_ID]);
-            Optional<String> delay = ParseRemove.parsePositiveValues(arrColumn[TOTAL]);
+            Optional<String> delay = ParsePositiveAndRemove.parsePositiveValues(arrColumn[TOTAL]);
 
             if (delay.isPresent()) {
                 JoinPair Key = new JoinPair(airportId, 1);
