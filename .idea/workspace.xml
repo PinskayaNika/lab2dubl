@@ -180,7 +180,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-38" />
     <option name="y" value="25" />
     <option name="width" value="1185" />
@@ -780,7 +780,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -827,7 +827,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: com.fasterxml.woodstox:woodstox-core:5.0.3</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>
