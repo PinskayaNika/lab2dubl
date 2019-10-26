@@ -15,13 +15,13 @@ public class FlightMapper extends Mapper<LongWritable, Text, JoinPair, Text> {
     private static final String DELIMITER = ",";
 
 
-    private Optional<String> parsePositiveValues(String string) {
-        if (string.isEmpty() || Float.parseFloat(string) < 0.0f) {
-            return Optional.empty();
-        } else {
-            return Optional.of(string);
-        }
-    }
+//    private Optional<String> parsePositiveValues(String value) {
+//        if (value .isEmpty() || Float.parseFloat(value ) < 0.0f) {
+//            return Optional.empty();
+//        } else {
+//            return Optional.of(value );
+//        }
+//    }
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {

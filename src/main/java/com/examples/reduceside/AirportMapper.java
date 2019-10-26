@@ -14,18 +14,18 @@ public class AirportMapper extends Mapper<LongWritable, Text, JoinPair, Text> {
     private static final int AIRPORT_NAME = 1;
 
 
-    public static String remove(String string) {
-        return  string.replaceAll(QUITE, EMPTY);
+    public static String remove(String value) {
+        return  value.replaceAll(QUITE, EMPTY);
     }
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
       Text airportName;
       int airportId;
-        String[] string = value.toString().split(DELIMITER);
+        String[] arrColumn = value.toString().split(DELIMITER);
       if (key.get() > 0) {
-          airportName = new Text(remove(string[AIRPORT_NAME]));
-          airportId = Integer.parseInt(remove(string[AIRPORT_ID]));
+          airportName = new Text(remove(arrColumn[AIRPORT_NAME]));
+          airportId = Integer.parseInt(remove(arrColumn[AIRPORT_ID]));
 
           JoinPair Key = new JoinPair(airportId, 0);
           context.write(Key, airportName);

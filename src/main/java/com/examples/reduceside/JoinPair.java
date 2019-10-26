@@ -9,10 +9,10 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 public class JoinPair implements WritableComparable {
-    public int airportID;
-    public int flag;
+    private int airportID;
+    private int flag;
 
-    public JoinPair(int airportID, int flag) {
+    JoinPair(int airportID, int flag) {
         this.airportID = airportID;
         this.flag = flag;
     }
@@ -32,7 +32,7 @@ public class JoinPair implements WritableComparable {
         out.writeInt(flag);
     }
 
-    public int getAirportID() {
+    int getAirportID() {
         return airportID;
     }
 
@@ -42,11 +42,10 @@ public class JoinPair implements WritableComparable {
     }
 
 
-    public int compareToFirstPart(JoinPair other) {
-        JoinPair second = other;
-        if (this.airportID > second.airportID) {
+    int compareToFirstPart(JoinPair other) {
+        if (this.airportID > other.airportID) {
             return 1;
-        } else  if (this.airportID < second.airportID) {
+        } else  if (this.airportID < other.airportID) {
             return -1;
         }
         return 0;
